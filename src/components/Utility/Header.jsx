@@ -15,9 +15,10 @@ const Header = () => {
     window.addEventListener('scroll', handleScroll);
   }, []);
   return (
-    <div className={`py-2 px-3 shadow-md shadow-neutral-300 bg-white w-full ${scroll > 20 ? "fixed top-0" : ""}`}>
+    <div className={`py-2 px-3 shadow-md shadow-neutral-300  z-50 bg-white w-full ${scroll > 20 ? "fixed top-0" : ""}`}>
       <div className='container m-auto xl:px-36 flex justify-between items-center'>
-        <div className="logo text-2xl font-extrabold text-pink-700 sm:text-5xl">F<span className='text-neutral-800'>oo</span>diesDish</div>
+
+        <NavLink to="/" className="logo text-2xl font-extrabold text-pink-700 sm:text-5xl">F<span className='text-neutral-800'>oo</span>diesDish</NavLink>
 
         <div onClick={toggleMenu} className={`icon cursor-pointer text-3xl z-50 ${showMenu ? "text-stone-200" : "text-neutral-800"} sm:hidden`}>
           {showMenu ? <RiCloseLargeFill /> : <HiOutlineMenuAlt3 />}
