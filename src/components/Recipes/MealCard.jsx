@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 const MealCard = ({ _id, image, title }) => {
   return (
     <div className="card meal rounded-md overflow-hidden shadow-lg border border-neutral-300 relative">

@@ -7,7 +7,7 @@ import chef4 from "../../images/chef4.png";
 import chef5 from "../../images/chef5.png";
 import chef6 from "../../images/chef6.png";
 import Heading from '../Utility/Heading';
-import MealsContext from '../../api/MealsContext';
+import { MealsContext } from '../../api/Api';
 const Chiefs = () => {
   const { UseHomeData } = useContext(MealsContext);
   const { chiefs } = UseHomeData();

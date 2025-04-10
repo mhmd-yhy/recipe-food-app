@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { BiSolidQuoteAltLeft } from 'react-icons/bi';
-import MealsContext from '../../api/MealsContext';
-
+import { MealsContext } from '../../api/Api';
 const Quote = () => {
   const { UseHomeData } = useContext(MealsContext);
   const { quote } = UseHomeData();

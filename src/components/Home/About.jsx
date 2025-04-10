@@ -10,7 +10,7 @@ import image8 from "../../images/abote8.jpg";
 import image9 from "../../images/abote9.jpg";
 import Heading from '../Utility/Heading';
 import Button from '../Utility/Button';
-import MealsContext from '../../api/MealsContext';
+import { MealsContext } from '../../api/Api';
 const About = () => {
   const imgSource = [image1, image2, image3, image4, image5, image6, image7, image8, image9];
   const { UseHomeData } = useContext(MealsContext);

@@ -4,7 +4,6 @@ import { FaHome } from 'react-icons/fa';
 import { HiOutlineMenuAlt3 } from 'react-icons/hi';
 import { RiCloseLargeFill } from 'react-icons/ri';
 import { NavLink } from 'react-router-dom';
-
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [scroll, setScroll] = useState(0);

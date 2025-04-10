@@ -77,7 +77,7 @@ const footer = {
   rights: {
     title: "foodiesDish.com",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, vero, magni eveniet voluptatum, doloribus corporis ullam non fuga necessitatibus.",
-    right: "© 2021 | non fuga necessitatibus",
+    right: "© 2025 | YahyaApp. All rights reserved.",
   },
   contact: {
     title: "Contact Us",

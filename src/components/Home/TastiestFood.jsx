@@ -1,13 +1,11 @@
-import React, { useContext, useEffect } from 'react';
-import MealsContext from '../../api/MealsContext';
+import React, { useContext } from 'react';
+import { MealsContext } from '../../api/Api';
 import MealsListContainer from '../Recipes/MealsListContainer';
 import Heading from '../Utility/Heading';
 import { Link } from 'react-router-dom';
 
 const TastiestFood = () => {
-  const { allMeals, getAllData } = useContext(MealsContext);
-  useEffect(() => { getAllData(); }, []);
-
+  const { allMeals } = useContext(MealsContext);
   return (
     <div className='container m-auto xl:px-36 py-3 mb-5 px-4'>
       <div className='flex items-center gap-3'>

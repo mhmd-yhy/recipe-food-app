@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import MealsContext from '../../api/MealsContext';
+import { MealsContext } from '../../api/Api';
 import CategoryCard from './CategoryCard';
 
 const CategoriesList = () => {

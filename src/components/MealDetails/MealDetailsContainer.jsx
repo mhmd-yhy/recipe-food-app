@@ -38,7 +38,7 @@ const MealDetailsContainer = ({ mealDetails }) => {
       <div className="Prepare col-span-2">
         <h2 className='font-bold text-stone-700 my-1 capitalize md:text-lg'>How to Prepare :</h2>
         <p className='text-sm text-stone-700 mb-3 sm:text-base sm:mb-5'>{mealDetails?.strInstructions}</p>
-        <Link to={mealDetails?.strSource} className="link"><Button title={"read more"} /></Link>
+        <Link to={mealDetails?.strSource} target='_blank' className="link"><Button title={"read more"} /></Link>
       </div>
     </div>
   );

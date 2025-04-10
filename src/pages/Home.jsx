@@ -7,7 +7,6 @@ import TastiestFood from '../components/Home/TastiestFood';
 import CategoriesContainer from '../components/Home/CategoriesContainer';
 const Home = () => {
   useEffect(() => { window.scrollTo({ behavior: "smooth", top: "0" }); }, []);
-
   return (
     <div>
       <About />

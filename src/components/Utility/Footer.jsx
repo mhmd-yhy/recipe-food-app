@@ -1,7 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import MealsContext from '../../api/MealsContext';
-
+import { MealsContext } from '../../api/Api';
 const Footer = () => {
   const { UseHomeData } = useContext(MealsContext);
   const { footer } = UseHomeData();

@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import image4 from "../../images/abote4.jpg";
 import Heading from '../Utility/Heading';
 import Button from '../Utility/Button';
-import MealsContext from '../../api/MealsContext';
+import { MealsContext } from '../../api/Api';
 
 const ImproveSkills = () => {
   const { UseHomeData } = useContext(MealsContext);

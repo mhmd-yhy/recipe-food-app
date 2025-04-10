@@ -5,13 +5,13 @@ import Home from './Home';
 import { Route, Routes } from 'react-router-dom';
 import Recipes from './Recipes';
 import MealDetails from './MealDetails';
-import MealsContext from '../api/MealsContext';
-import Actions from '../api/Actions';
+import Api, { MealsContext } from '../api/Api';
+
 const Pages = () => {
-  const [allMeals, allCategories, getData, getAllData, oneMeal, allMeals_ByCategory, allMeals_BySearch, UseHomeData] = Actions();
+  const [allMeals, allCategories, allMeals_ByCategory, allMeals_BySearch, getData, UseHomeData, getMeals_ByCategory, getMeals_BySearchInput] = Api();
   return (
     <div className="App bg-stone-50 relative overflow-hidden">
-      <MealsContext.Provider value={{ allMeals, allCategories, getData, getAllData, oneMeal, allMeals_ByCategory, allMeals_BySearch, UseHomeData }}>
+      <MealsContext.Provider value={{ allMeals, allCategories, getData, allMeals_ByCategory, allMeals_BySearch, UseHomeData, getMeals_ByCategory, getMeals_BySearchInput }}>
         <Header />
 
         <Routes>

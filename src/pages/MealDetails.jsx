@@ -1,21 +1,27 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import MealCard from '../components/Recipes/MealCard';
 import MealDetailsContainer from '../components/MealDetails/MealDetailsContainer';
 import { useParams } from 'react-router-dom';
-import MealsContext from '../api/MealsContext';
+import { MealsContext } from '../api/Api';
 
 const MealDetails = () => {
   const { id } = useParams();
-  const { getData, oneMeal, allMeals_ByCategory } = useContext(MealsContext);
+  const { getData } = useContext(MealsContext);
+  const [oneMeal, setOneMeal] = useState([{ strIngredient1: "" }]);
+  const [allMeals_ByCategory, setAllMeals_ByCategory] = useState([]);
 
   useEffect(() => { window.scrollTo({ behavior: "smooth", top: "0" }); }, [id]);
-  useEffect(() => { getData("meal_ByID", id); }, [id]);
+  useEffect(() => {
+    const run = async () => {
+      setAllMeals_ByCategory(await getData(`filter.php?c=${oneMeal?.meals?.[0].strCategory}`));
+    };
+    run();
+  }, [oneMeal, id, getData]);
 
   useEffect(() => {
-    if (oneMeal?.meals?.[0]) {
-      getData("meals_ByCategory", oneMeal.meals[0].strCategory);
-    }
-  }, [oneMeal]);
+    const run = async () => { setOneMeal(await getData(`lookup.php?i=${id}`)); };
+    run();
+  }, [id, getData]);
 
   return (
     <div className='container m-auto px-2 xl:px-36 py-3 '>
